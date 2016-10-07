@@ -89,7 +89,7 @@
 	function createResolver(method) {
 		return function resolver(resolve, reject) {
 			// Reject the promise if asked to exitFullscreen and there is no element currently in fullscreen
-			if (method === w3.exit && !doc[api.element]) {
+			if (method === w3.exit && !doc[w3.element]) {
 				setTimeout(function() {
 					reject(new TypeError());
 				}, 1);
